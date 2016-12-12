@@ -7,6 +7,7 @@
             offsetXPercent = Math.max(0, offsetXPercent);
             offsetXPercent = Math.min(1, offsetXPercent);
             return offsetXPercent;
+            console.log(offsetXPercent);
         };
         
         return {
@@ -29,6 +30,10 @@
 
                 scope.fillStyle = function() {
                     return {width: percentString()};
+                };
+                
+                scope.thumbStyle = function() {
+                    return {left: percentString()};
                 };
                 
                 scope.onClickSeekBar = function(event) {
