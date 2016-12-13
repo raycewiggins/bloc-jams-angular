@@ -65,6 +65,8 @@
          */
         SongPlayer.currentTime = null;
         
+        SongPlayer.volume = null;
+        
         /**
          * @function SongPlayer.play
          * @desc Takes in a song and plays the associated audiofile
@@ -128,6 +130,12 @@
         SongPlayer.setCurrentTime = function(time) {
             if (currentBuzzObject) {
                 currentBuzzObject.setTime(time);
+            }
+        };
+        
+        SongPlayer.setVolume = function(volume) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
             }
         };
         
